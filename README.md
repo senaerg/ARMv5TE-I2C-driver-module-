@@ -1,6 +1,8 @@
 # ARMv5TE-I2C-driver-module-
 arm9 archecture i2c driver module genration
-#execution and  testing
+# compile device tree 
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- dtbs
+# execution and  testing
 1. Transfer your newly compiled .dtb file to your board's boot partition/server.
 2. Build the module in this project workspace:
    make KDIR=/path/to/your/arm9/linux/source
