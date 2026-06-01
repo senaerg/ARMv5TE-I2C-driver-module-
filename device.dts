@@ -1,0 +1,11 @@
+/* Example placement inside a generic ARM9 chip I2C block */
+&i2c0 {
+    status = "okay";
+    pinctrl-names = "default";
+    pinctrl-0 = <&pinctrl_i2c0_pins>; /* Check your specific board DTSI file */
+
+    dummy_device@20 {
+        compatible = "krinkin,dummy-device";
+        reg = <0x20>; /* Configured I2C Hex Address */
+    };
+};
